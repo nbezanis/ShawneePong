@@ -41,7 +41,7 @@ public class PongDisplay extends JPanel {
 		super.paintComponent(g); //repaints anything the superclass wants to do
 		//this includes subcomponents (aka potentially an in game menu) and borders
 		//if necessary
-		
+		g.drawString("suh dude", 100, 100);
 		//right here I would put pongGame.drawGame(g) or something similar
 		//however more code would have to be written for it to work
 	}

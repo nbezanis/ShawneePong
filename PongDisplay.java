@@ -12,9 +12,15 @@ public class PongDisplay extends JPanel {
 	//shut up about the serial version
 	private Timer repainter;
 	//TODO change this in order to get access to pong game
-	public PongDisplay() {
+	
+	Player player1;
+	Player player2;
+	public PongDisplay(Player player1, Player player2) {
 		constructPanel();
 		createRepainter();
+		
+		this.player1 = player1;//added players 1 and 2 to the constructor so they can access the draw loop
+		this.player2 = player2;
 	}
 	private void constructPanel() {
 		setOpaque(false); //makes the background not displayed (transparent)
@@ -44,5 +50,10 @@ public class PongDisplay extends JPanel {
 		g.drawString("suh dude", 100, 100);
 		//right here I would put pongGame.drawGame(g) or something similar
 		//however more code would have to be written for it to work
+		
+		player1.update();//updates player variables and draws them every frame
+		player1.draw(g);
+		player2.update();
+		player2.draw(g);
 	}
 }

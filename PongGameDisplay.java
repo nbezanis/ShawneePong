@@ -6,16 +6,16 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 /**Actual holder for the game display. Add this to a container and it should work*/
-public class PongDisplay extends JPanel {
+public class PongGameDisplay extends JPanel {
 	private static final int FPS_GOAL = 60; //can be changed easily
 	private static final long serialVersionUID = 1L; //unused, just to get the editor to
 	//shut up about the serial version
 	private Timer repainter;
-	//TODO change this in order to get access to pong game
-	
+	//TODO change this in order to get access to pong game	
 	Player player1;
 	Player player2;
-	public PongDisplay(Player player1, Player player2) {
+	
+	public PongGameDisplay(Player player1, Player player2) {
 		constructPanel();
 		createRepainter();
 		

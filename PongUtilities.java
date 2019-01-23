@@ -28,7 +28,7 @@ public class PongUtilities {
 		return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
 	}
 	
-	//funtion that converts degrees to radians
+	//function that converts degrees to radians
 	//angle = angle to be converted
 	public static double toRads(double angle) {
 		return angle * (Math.PI/180);

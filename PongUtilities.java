@@ -16,4 +16,21 @@ public class PongUtilities {
 		SCREEN_HEIGHT = dm.getHeight();
 	}
 	//might include stuff for loading idk yet
+	
+	//this function takes a range of numbers and uses proportions to map it to another range of numbers. ex: if I had a color value 200 from 0 to 255 and I wanted to
+	//put it on a scale of 0 to 1, this function will do that.
+	//value = the number to be mapped (200 from the color example)
+	//istart = the beginning of the first range of numbers (0 in my color example)
+	//istop = the end of the first range of numbers (255 in my color example)
+	//ostart = the beginning of the second range of numbers (0 in my color example)
+	//ostop = the end of the second range of numbers (1 in my color example)
+	public static double map(double value, double istart, double istop, double ostart, double ostop) {
+		return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
+	}
+	
+	//funtion that converts degrees to radians
+	//angle = angle to be converted
+	public static double toRads(double angle) {
+		return angle * (Math.PI/180);
+	}
 }

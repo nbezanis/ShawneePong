@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Graphics;
 
 //a class for the 2 stick things that the players control
@@ -19,6 +20,9 @@ public class Player {
 	//this function is for drawing the player's stick thing, I'm putting this in the player class because it would be easier to access the x and y positions of the player
 	//in the player class itself rather than in the display class
 	public void draw(Graphics g) {
-		
+		Color c = g.getColor();
+		g.setColor(Color.LIGHT_GRAY);
+		g.fillRect(x, y, WIDTH, HEIGHT);
+		g.setColor(c);
 	}
 }

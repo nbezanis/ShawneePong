@@ -74,4 +74,10 @@ public class PongMenu extends JPanel {
 		};
 		return listeners;
 	}
+	private void putUpGamePanel() {
+		//need other code to write this (specifically a game class)
+	}
+	private void putUpMenu() {
+		//need other code to write this (specifically a game class)
+	}
 }

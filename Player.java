@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-//a class for the 2 stick things that the players control
+/**a class for the 2 stick things that the players control*/
 public class Player {
 	
 	public int x, y;//variables for the x and y positions of the player
